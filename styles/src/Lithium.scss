@@ -1,0 +1,37 @@
+/*
+	Lithium Sock Chat Style
+	By Flashwave <http://flash.moe>
+	
+	Color palette inspired by PunBB style "Lithium":
+	http://punbb.org/
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #F1F1F1;
+$primaryColor:                      #333333;
+
+$interfaceBorderColor:              #6C8A3F;
+$interfaceButtonBackground:         #6C8A3F;
+$interfaceButtonColor:              #FFFFFF;           
+$interfaceLinkColor:                #000000;
+$interfaceInputBackground:          #FFFFFF;
+$interfaceInputColor:               #333333;
+$interfaceSidebarBackground:        #F1F1F1;
+$interfaceSidebarTitleBackground:   #6C8A3F;
+
+$chatBotColor:                      #638137;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #638137;
+$chatOddRowBackground:              #DEDFDF;
+$chatEvenRowBackground:             #F1F1F1;
+
+@include theme();
+
+#chat a, #chat a:visited {
+    color: #638137;
+}
+
+#chat input[type="button"]:hover, #chat input[type="submit"]:hover {
+    background: #5E7D2E;
+}

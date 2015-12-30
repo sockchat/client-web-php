@@ -1,0 +1,31 @@
+/*
+	Blue Sock Chat Style
+	By nookls <http://nookls.org>
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #002545;
+$primaryColor:                      #FFFFFF;
+
+$interfaceBorderColor:              #808080;
+$interfaceButtonBackground:         linear-gradient(180deg, #002545, #000) #002545;
+$interfaceButtonColor:              #F0F0F0;           
+$interfaceLinkColor:                #FFFFFF;
+$interfaceInputBackground:          #002545;
+$interfaceInputColor:               #FFFFFF;
+$interfaceSidebarBackground:        #002545;
+$interfaceSidebarTitleBackground:   #0D355D;
+
+$chatBotColor:                      #C0C0C0;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #1E90FF;
+$chatOddRowBackground:              #002545;
+$chatEvenRowBackground:             #0D355D;
+
+@include theme();
+
+#chat #chatList {
+    border: 1px solid #003D8E;
+}
+

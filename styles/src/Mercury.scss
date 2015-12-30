@@ -1,0 +1,29 @@
+/*
+	Mercury Sock Chat Style
+	By Flashwave <http://flash.moe>
+	
+	Color palette inspired by PunBB style "Mercury":
+	http://punbb.org/
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #2A2A2A;
+$primaryColor:                      #D4D4D4;
+
+$interfaceBorderColor:              #565656;
+$interfaceButtonBackground:         #1A1A1A;
+$interfaceButtonColor:              #ABABAB;           
+$interfaceLinkColor:                #F6B620;
+$interfaceInputBackground:          #383838;
+$interfaceInputColor:               #ABABAB;
+$interfaceSidebarBackground:        #383838;
+$interfaceSidebarTitleBackground:   #505050;
+
+$chatBotColor:                      #F6B620;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #1E90FF;
+$chatOddRowBackground:              #484848;
+$chatEvenRowBackground:             #505050;
+
+@include theme();

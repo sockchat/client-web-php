@@ -1,0 +1,31 @@
+/*
+ * Connection message styling (e.g. Loading Sock Chat...)
+ */
+
+#connectionMessage {
+    background: #111;
+    height: 100%;
+    width: 100%;
+    font: 400 12px/20px "Verdana", "Arial", sans-serif;
+    text-align: center;
+    color: #EEE;
+    padding-top: 30px;
+    text-shadow: 0 1px 0 #999;
+}
+
+#connectionMessage.loadingChat {
+    animation: backgroundFade 5s infinite alternate;
+}
+
+#connectionMessage #connectionMessageTitle {
+    font-size: 5em;
+    line-height: 2em;
+}
+
+#connectionMessage.loadingChat #connectionMessageTitle {
+    animation: glowFade 5s infinite alternate;
+}
+
+#connectionMessage #connectionMessageSub {
+    font-size: 1.2em;
+}

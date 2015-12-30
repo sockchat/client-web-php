@@ -1,0 +1,29 @@
+/*
+	Oxygen Sock Chat Style
+	By Flashwave <http://flash.moe>
+	
+	Color palette inspired by PunBB style "Oxygen":
+	http://punbb.org/
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #F1F1F1;
+$primaryColor:                      #333333;
+
+$interfaceBorderColor:              #0066B9;
+$interfaceButtonBackground:         linear-gradient(to bottom, #4795CC, #2A6AB8) #0066B9;
+$interfaceButtonColor:              #FFFFFF;           
+$interfaceLinkColor:                #0066B9;
+$interfaceInputBackground:          #F7F5DC;
+$interfaceInputColor:               #000000;
+$interfaceSidebarBackground:        #F1F1F1;
+$interfaceSidebarTitleBackground:   linear-gradient(to bottom, #4795CC, #2A6AB8) #0066B9;
+
+$chatBotColor:                      #0066B9;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #1E90FF;
+$chatOddRowBackground:              #E6E7E7;
+$chatEvenRowBackground:             #F1F1F1;
+
+@include theme();

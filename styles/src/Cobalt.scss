@@ -1,0 +1,29 @@
+/*
+	Cobalt Sock Chat Style
+	By Flashwave <http://flash.moe>
+	
+	Color palette inspired by PunBB style "Cobalt":
+	http://punbb.org/
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #2A2A2A;
+$primaryColor:                      #D4D4D4;
+
+$interfaceBorderColor:              #565656;
+$interfaceButtonBackground:         linear-gradient(180deg, #222, #000) #000;
+$interfaceButtonColor:              #F0F0F0;           
+$interfaceLinkColor:                #FFFFFF;
+$interfaceInputBackground:          #383838;
+$interfaceInputColor:               #ABABAB;
+$interfaceSidebarBackground:        #383838;
+$interfaceSidebarTitleBackground:   #383838;
+
+$chatBotColor:                      #60A0DC;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #60A0DC;
+$chatOddRowBackground:              #484848;
+$chatEvenRowBackground:             #565656;
+
+@include theme();

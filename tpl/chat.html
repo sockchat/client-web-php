@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{{ CHAT_TITLE }}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link href="./styles/{{{ DEFAULT_STYLE }}}.css" rel="stylesheet" type="text/css" />
+    {{{ ALT_STYLES }}}
+    <link href="./styles/_base.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="chat.min.js"></script>
+    <script type="text/javascript">
+        Socket.args = "{|{ AUTH }|}".split("\f");
+        Socket.redirectUrl = "{|{ REDIRECT_ADDR }|}";
+        Socket.addr = "ws://{|{ SERVER_ADDR }|}";
+
+        function toggleChannelList() {
+            var chatList = document.getElementById('chatList');
+            var channelList = document.getElementById('channelList');
+            var toggleBtn = document.getElementById('channelListToggle');
+
+            if(channelList.className.indexOf('hidden') < 0) {
+                toggleBtn.innerHTML = 'Show Channels';
+                channelList.className = channelList.className + ' hidden';
+                chatList.className = chatList.className.replace('channelListOpen', '');
+            } else {
+                toggleBtn.innerHTML = 'Hide Channels';
+                chatList.className = chatList.className + ' channelListOpen';
+                channelList.className = channelList.className.replace('hidden', '');
+            }
+        }
+        function toggleEmoteicons() {
+            var emoteBox = document.getElementById('emoticonsContainer');
+
+            if(emoteBox.className.indexOf('hidden') < 0) {
+                emoteBox.className = emoteBox.className + ' hidden';
+            } else {
+                emoteBox.className = emoteBox.className.replace('hidden', '');
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="connectionMessage" class="loadingChat"><!-- Just remove the loadingChat class and it'll remove the fade shit (for when to display the kick message -->
+    <div id="connectionMessageTitle">Loading Sock Chat...</div>
+    <div id="connectionMessageSub" class="hidden">
+        <span id="kickTime">There was no time set for this kick, you can log back in immediately.</span><br />
+        The reason given was: &quot;<span id="kickReason">You're a faggot.</span>&quot;
+    </div>
+</div>
+<div id="chat" class="hidden">
+    <div id="chatTitle">{{{ CHAT_TITLE }}}</div>
+    <div id="mobileChatTitle">{{{ M_CHAT_TITLE }}}</div>
+    <div id="channelListDisplayButtonContainer">
+        <button onclick="toggleChannelList();" id="channelListToggle">Hide Channels</button>
+    </div>
+    <div id="chatList" class="userListOpen channelListOpen">
+        <!--
+        <div><span class="date">(01:04:37)</span> <span onclick="UI.InsertChatText(this.innerHTML.replace(/<[^>]*>/g, ''));" style="font-weight: bold;color:#EE9400;">bribob4</span><span class="msgColon">: </span><span class="msgBreak hidden"><br /></span>should i play more ddr</div>
+        -->
+    </div>
+    <div class="sidebar sidebar-left" id="channelList">
+        <div class="sidebar-title">
+            Channels
+        </div>
+        <div class="list">
+            <div><a href="#" class="current">#flashii</a></div>
+            <div><a href="#" class="new-messages">#osu</a></div>
+            <div><a href="#">#drama</a></div>
+        </div>
+    </div>
+    <div class="sidebar sidebar-right" id="userList">
+        <div class="sidebar-title">
+            Users
+        </div>
+        <div class="list">
+        </div>
+    </div>
+    <div class="widebar" id="settingsList">
+        <div class="sidebar-title">
+            Settings
+        </div>
+        <table>
+
+        </table>
+    </div>
+    <div class="widebar" id="helpList">
+        <div class="sidebar-title">
+            Help
+        </div>
+        <table>
+
+        </table>
+    </div>
+    <div id="inputFieldContainer">
+        <textarea id="message"></textarea>
+        <div id="disconnectMessage" class="hidden">
+            <span id="desktopMessage">Connection interrupted.<br />Attempting to reconnect...</span>
+            <span id="mobileMessage">Reconnecting...</span>
+        </div>
+    </div>
+    <div id="emoticonsContainer" class="hidden">
+        <img alt="" title="emote" src="img/emotes/angel.png" />
+        <img alt="" title="emote" src="img/emotes/confused.png" />
+        <img alt="" title="emote" src="img/emotes/cool.png" />
+        <img alt="" title="emote" src="img/emotes/crying.png" />
+        <img alt="" title="emote" src="img/emotes/devilish.png" />
+        <img alt="" title="emote" src="img/emotes/eek.png" />
+        <img alt="" title="emote" src="img/emotes/error.png" />
+        <img alt="" title="emote" src="img/emotes/favorite.png" />
+        <img alt="" title="emote" src="img/emotes/glasses.png" />
+        <img alt="" title="emote" src="img/emotes/grin.png" />
+        <img alt="" title="emote" src="img/emotes/help.png" />
+        <img alt="" title="emote" src="img/emotes/idea.png" />
+        <img alt="" title="emote" src="img/emotes/important.png" />
+        <img alt="" title="emote" src="img/emotes/kiss.png" />
+        <img alt="" title="emote" src="img/emotes/monkey.png" />
+        <img alt="" title="emote" src="img/emotes/plain.png" />
+        <img alt="" title="emote" src="img/emotes/razz.png" />
+        <img alt="" title="emote" src="img/emotes/sad.png" />
+        <img alt="" title="emote" src="img/emotes/smile.png" />
+        <img alt="" title="emote" src="img/emotes/smile-big.png" />
+        <img alt="" title="emote" src="img/emotes/surprise.png" />
+        <img alt="" title="emote" src="img/emotes/warning.png" />
+        <img alt="" title="emote" src="img/emotes/wink.png" />
+        <img alt="" title="emote" src="img/emotes/xp.png" />
+    </div>
+    <div id="bbCodeContainer">
+        <button>b</button>
+        <button>i</button>
+        <button>u</button>
+        <button>Quote</button>
+        <button>Code</button>
+        <button>Colour</button>
+        <button>Link</button>
+        <button>Image</button>
+        <button onclick="toggleEmoteicons();">Emoticons</button>
+    </div>
+    <div id="optionsContainer">
+        <img style="background: transparent url('img/help.png');" alt="" src="img/pixel.png" />
+        <img style="background: transparent url('img/audio.png');" alt="" src="img/pixel.png" />
+        <img style="background: transparent url('img/clear.png');" alt="" src="img/pixel.png" />
+        <img style="background: transparent url('img/users.png');" alt="" src="img/pixel.png" />
+        <img style="background: transparent url('img/settings.png');" alt="" src="img/pixel.png" />
+        <img style="background: transparent url('img/autoscroll.png');" alt="" src="img/pixel.png" />
+    </div>
+    <div id="hidden">
+        {{{ SOUND_PACK_HTML }}}
+    </div>
+    <div id="picker">
+        <div id="ppicker"></div>
+        <div id="pslider"></div>
+        <div id="ppickeri"></div>
+        <div id="pslideri"></div>
+        <div id="popts">
+            <input type="button" value="OK" id="pok" style="width: 100%;" />
+        </div>
+    </div>
+    <!--
+        Remove this if you want, I don't really care.
+        Just remember that the top right corner will
+        look really boring without it.
+    -->
+    <div id="copyright">
+        <a href="http://sockch.at">Sock Chat</a> &copy; <a href="http://aroltd.com" target="_blank">aroltd.com</a>
+    </div>
+</div>
+</body>
+</html>

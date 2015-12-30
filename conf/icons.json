@@ -1,0 +1,31 @@
+{
+    "icons":
+        [
+            {
+                "img"    : "help.png",
+                "action" : "UI.ChangeSidebar('helpList');"
+            },
+            {
+                "img"    : "settings.png",
+                "action" : "UI.ChangeSidebar('settingsList');"
+            },
+            {
+                "img"    : "users.png",
+                "action" : "UI.ChangeSidebar('userList');"
+            },
+            {
+                "img"    : "audio.png",
+                "action" : "Chat.ToggleSound(this);",
+                "load"   : "Chat.PrepareSound(this);"
+            },
+            {
+                "img"    : "clear.png",
+                "action" : "Chat.Clear();",
+                "limit"  : true
+            },
+            {
+                "img"    : "autoscroll.png",
+                "action" : "Chat.ToggleScrolling(this);"
+            }
+        ]
+}

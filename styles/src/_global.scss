@@ -1,0 +1,204 @@
+/*
+	Global Sock Chat CSS
+*/
+
+@charset "utf-8";
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#chat #chatList .insertImage {
+    /*max-width: 1080px;
+    max-height: 180px;*/
+    max-width: 70vw;
+    max-height: 80vh;
+    vertical-align: top;
+    overflow: auto;
+    margin: 5px;
+    border: 0;
+}
+
+#chat #settingsList table, #chat #helpList table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#chat #settingsList table tr td, #chat #helpList table tr td {
+    padding: 4px 10px;
+    vertical-align: middle;
+}
+#chat #settingsList .setting {
+    width: 115px;
+}
+#chat #settingsList input[type="text"] {
+    width: 100px;
+}
+
+#chat #chatList, #chat .sidebar, #chat .widebar {
+    -webkit-overflow-scrolling: touch;
+    -ms-scroll-chaining: none;
+    -ms-touch-action: pan-y;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+#chat #chatList iframe {
+    vertical-align: top;
+    overflow: auto;
+}
+
+#chat #chatList .botError,
+#chat #chatList .botMessage,
+#chat #chatList .botName {
+    font-style: italic;
+}
+
+#chat .sidebar-title {
+    width: auto !important;
+    padding: 4px 10px !important;
+    word-wrap: break-word !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+#chat .sidebar-title,
+#chat .sidebar .list > div,
+#chat .widebar > div,
+#chat #chatList > div {
+    width: auto;
+    padding: 2px 10px;
+}
+
+#chat #channelList .list .current {
+    font-weight: bold;
+}
+
+#chat #channelList .list .new-messages:after {
+    content: " (!)";
+    font-weight: bold;
+}
+
+.alert {
+    position: absolute;
+    top: 15px;
+    margin: 0 auto;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    width: 25%;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 3px double black;
+    padding: 15px;
+}
+
+#chat #bbCodeContainer button {
+    float: left;
+}
+#chat #bbCodeContainer button:not(:last-child) {
+    margin: 0 3px 0 0;
+}
+
+#chat #optionsContainer img {
+    padding: 0;
+    border: 0;
+    width: 22px;
+    height: 22px;
+    float: left;
+}
+#chat #optionsContainer img:not(:last-child) {
+    margin: 0 5px 0 0;
+}
+
+#chat #optionsContainer img:hover, .fakeLink:hover {
+    cursor: pointer;
+}
+
+#chat #emoticonsContainer img {
+    padding: 0;
+    border: 0;
+    float: left;
+}
+#chat #emoticonsContainer img:not(:last-child) {
+    margin: 0 3px 0 0;
+}
+
+.chatEmote {
+    vertical-align: middle;
+}
+
+#chat #emoticonsContainer img:hover {
+    cursor: pointer;
+}
+
+#hidden {
+    display: none;
+	visibility: hidden;
+}
+
+#chat .userMenu {
+    margin: 5px 0px;
+    padding-left: 20px;
+}
+
+#chat #picker {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width:200px;
+    height: 200px;
+    display: none;
+    border: 1px solid grey;
+}
+
+#chat #picker #ppicker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 173px;
+}
+
+#chat #picker #pslider {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 180px;
+    height: 173px;
+}
+
+#chat #picker #popts {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+}
+
+#chat #picker #ppickeri {
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    border: 1px solid white;
+}
+
+#chat #picker #pslideri {
+    width: 18px;
+    height: 10px;
+    position: absolute;
+    border: 1px solid black;
+}

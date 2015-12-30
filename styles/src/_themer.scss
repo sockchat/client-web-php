@@ -1,0 +1,135 @@
+/*
+	SockChat Theming Doohickey
+
+	NOTE: If your theme changes the layout of the chat application or
+	has any other overrides, consider adding your styles to the end
+	of your stylesheet (after the "@include theme();" statement).
+
+	Only edit this file if you want your changes to be made to every
+	other theme file.
+
+ */
+
+@mixin theme() {
+
+	#chat {
+		background: $primaryBackground;
+		color: $primaryColor;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: .8em;
+	}
+
+	#chat a, #chat a:visited {
+		color: $interfaceLinkColor;
+	}
+
+	#chat #chatList a, #chat #chatList a:visited {
+		color: $chatLinkColor;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	#chat #chatTitle, #chat #mobileChatTitle {
+		font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+	}
+
+	#chat #chatTitle, #chat #mobileChatTitle {
+		font-size: 1.3em;
+		font-weight: bold;
+		margin-left: auto;
+		margin-top: 12px;
+	}
+
+	#chat #userData select {
+		min-width: 105px;
+		height: 22px;
+	}
+
+	#chat select {
+		color: $interfaceInputColor;
+		background-color: $interfaceInputBackground;
+		border: 1px solid $interfaceBorderColor;
+	}
+
+	#chat #chatList {
+		border: 1px solid $interfaceBorderColor;
+	}
+
+	#chat #chatList .botName {
+		color: $chatBotColor;
+	}
+
+	#chat #chatList .botError {
+		color: $chatBotErrorColor;
+	}
+
+	#chat #chatList > div:nth-child(odd),
+	#chat .sidebar > .list > div:nth-child(odd),
+	#chat .widebar > div:nth-child(odd) {
+		background: $chatOddRowBackground;
+	}
+
+	#chat #chatList > div:nth-child(even),
+	#chat .sidebar > .list > div:nth-child(even),
+	#chat .widebar > div:nth-child(even),
+	#chat .sidebar-title {
+		background: $chatEvenRowBackground;
+	}
+
+	 #chat .sidebar .top, #chat .widebar .top, #chat #channelList .top {
+		background: $interfaceSidebarTitleBackground;
+	}
+
+	.date {
+		font-size: .7em;
+	}
+
+	#chat .sidebar, #chat .widebar, #chat #channelList, #chat #channelList {
+		border: 1px solid $interfaceBorderColor;
+		background: $interfaceSidebarBackground;
+	}
+
+	#chat .sidebar .top, #chat .widebar .top, #chat #channelList .top {
+		font-size: 1em;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#chat .sidebar div, #chat .widebar div {
+		font-size: .9em;
+	}
+
+	.alert input[type="password"], .alert input[type="text"], #chat textarea, #chat #inputFieldContainer input[type="text"] {
+		color: $interfaceInputColor;
+		background: $interfaceInputBackground;
+		border:1px solid $interfaceBorderColor;
+	}
+
+	.alert input[type="password"], .alert input[type="text"] {
+		padding: 5px 2px;
+	}
+
+	#chat button, input[type="button"], #chat input[type="submit"] {
+		cursor: pointer;
+		padding: 0 10px;
+		background: $interfaceButtonBackground;
+		color: $interfaceButtonColor;
+		border: 1px solid $interfaceBorderColor;
+		height: 28px;
+	}
+
+	#chat #copyright {
+		font-size: .8em;
+	}
+
+	$disconnectMessageBackground: rgba(140, 140, 140, 0.3) !default;
+	#chat #inputFieldContainer #disconnectMessage {
+		background: $disconnectMessageBackground;
+	}
+}

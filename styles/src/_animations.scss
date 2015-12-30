@@ -1,0 +1,46 @@
+/*
+ * Animation Sequences
+ */
+
+/*
+ * Keyframes
+ */
+@keyframes backgroundFade {
+    0% {
+        background: #111;
+    }
+    100% {
+        background: #333;
+    }
+}
+@keyframes glowFade {
+    0% {
+        text-shadow: 0 0 10px #FF9999;
+    }
+    20% {
+        text-shadow: 0 0 10px #FFE599;
+    }
+    40% {
+        text-shadow: 0 0 10px #E5FF99;
+    }
+    60% {
+        text-shadow: 0 0 10px #99FFE5;
+    }
+    80% {
+        text-shadow: 0 0 10px #FF99FF;
+    }
+    100% {
+        text-shadow: 0 0 10px #FF99B2;
+    }
+}
+
+
+/*
+ * Classes
+ */
+.animation.backgroundFade {
+    animation: backgroundFade 5s infinite alternate;
+}
+.animation.glowFade {
+    animation: glowFade 5s infinite alternate;
+}

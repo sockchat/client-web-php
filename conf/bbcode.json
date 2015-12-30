@@ -1,0 +1,91 @@
+{
+    "bbcode":
+        [
+            {
+                "tag": "b",
+                "arg": false,
+                "swap": "<b>{0}</b>",
+                "button": "b",
+                "bstyle": "font-weight: bold;",
+                "persist": true,
+                "pdef": false,
+                "pstyle": "font-weight: bold;"
+            },
+            {
+                "tag": "i",
+                "arg": false,
+                "swap": "<i>{0}</i>",
+                "button": "i",
+                "bstyle": "font-style: italic;",
+                "persist": true,
+                "pdef": false,
+                "pstyle": "font-style: italic;"
+            },
+            {
+                "tag": "u",
+                "arg": false,
+                "swap": "<u>{0}</u>",
+                "button": "u",
+                "bstyle": "text-decoration: underline;",
+                "persist": true,
+                "pdef": false,
+                "pstyle": "text-decoration: underline;"
+            },
+            {
+                "tag": "quote",
+                "arg": false,
+                "swap": "<q style='font-variant: small-caps;'>{0}</q>",
+                "button": true
+            },
+            {
+                "tag": "code",
+                "arg": false,
+                "swap": "<span style='white-space: pre-wrap; font-family: monospace; font-size: 1.2em;'>{0}</span>",
+                "button": true
+            },
+            {
+                "tag": "color",
+                "arg": true,
+                "rmarg": ";:{}<>'\"",
+                "swap": "<span style='color:{0};'>{1}</span>",
+                "toggle": true,
+                "tdef": true,
+                "button": true,
+                "bhandle": "Chat.ShowColorPicker();",
+                "persist": true,
+                "pdef": false,
+                "pstyle": "color: {0};"
+            },
+            {
+                "tag": "url",
+                "arg": false,
+                "rmin": "\"'",
+                "swap": "<a href='{0}' onclick='window.open(this.href);return false;'>{0}</a>"
+            },
+            {
+                "tag": "url",
+                "arg": true,
+                "rmarg": "\"'",
+                "swap": "<a href='{0}' onclick='window.open(this.href);return false;'>{1}</a>",
+                "button": true,
+                "bprompt": "urlprompt"
+            },
+            {
+                "tag": "video",
+                "arg": false,
+                "rmin": ":/\\;\"'",
+                "swap": "<span title='{0}'><span title='link'><a href='https://www.youtube.com/watch?v={0}' onclick='window.open(this.href);return false;'>https://www.youtube.com/watch?v={0}</a></span>&nbsp;[<a href='#' onclick='Utils.EmbedVideo(this);return false;'>Embed</a>]</span>",
+                "toggle": true,
+                "tdef": false
+            },
+            {
+                "tag": "img",
+                "arg": false,
+                "rmin": "\"'",
+                "swap": "<span title='{0}'><span title='link'><a href='{0}' onclick='window.open(this.href);return false;'>{0}</a></span>&nbsp;[<a href='#' onclick='Utils.EmbedImage(this);return false;'>Embed</a>]</span>",
+                "button": true,
+                "toggle": true,
+                "tdef": true
+            }
+        ]
+}

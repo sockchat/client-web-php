@@ -1,0 +1,26 @@
+/*
+	Black Sock Chat Style
+	By Flashwave <http://flash.moe> and MallocNull <http://aroltd.com>
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #000000;
+$primaryColor:                      #FFFFFF;
+
+$interfaceBorderColor:              #808080;
+$interfaceButtonBackground:         linear-gradient(180deg, #222, #000) #000;
+$interfaceButtonColor:              #F0F0F0;           
+$interfaceLinkColor:                #FFFFFF;
+$interfaceInputBackground:          #000000;
+$interfaceInputColor:               #FFFFFF;
+$interfaceSidebarBackground:        #000000;
+$interfaceSidebarTitleBackground:   #000000;
+
+$chatBotColor:                      #C0C0C0;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #1E90FF;
+$chatOddRowBackground:              #000000;
+$chatEvenRowBackground:             #212121;
+
+@include theme();

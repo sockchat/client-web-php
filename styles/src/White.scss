@@ -1,0 +1,26 @@
+/*
+	White Sock Chat Style
+	By Flashwave <http://flash.moe> and MallocNull <http://aroltd.com>
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #FFFFFF;
+$primaryColor:                      #000000;
+
+$interfaceBorderColor:              #808080;
+$interfaceButtonBackground:         linear-gradient(180deg, #FFF, #DDD) #FFF;
+$interfaceButtonColor:              #0F0F0F;           
+$interfaceLinkColor:                #000000;
+$interfaceInputBackground:          #FFFFFF;
+$interfaceInputColor:               #000000;
+$interfaceSidebarBackground:        #FFFFFF;
+$interfaceSidebarTitleBackground:   #DEDEDE;
+
+$chatBotColor:                      #0C0C0C;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #1E90FF;
+$chatOddRowBackground:              #FFFFFF;
+$chatEvenRowBackground:             #DEDEDE;
+
+@include theme();

@@ -1,0 +1,26 @@
+/*
+	Beige Sock Chat Style
+	By Flashwave <http://flash.moe>
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #F7F5DC;
+$primaryColor:                      #000000;
+
+$interfaceBorderColor:              #C8B360;
+$interfaceButtonBackground:         linear-gradient(180deg, #E1D995, #D9CE72) #D9CE72;
+$interfaceButtonColor:              #333333;           
+$interfaceLinkColor:                #000000;
+$interfaceInputBackground:          #F7F5DC;
+$interfaceInputColor:               #000000;
+$interfaceSidebarBackground:        #F7F5DC;
+$interfaceSidebarTitleBackground:   #FFFFF0;
+
+$chatBotColor:                      #FF6600;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #1E90FF;
+$chatOddRowBackground:              #F7F5DC;
+$chatEvenRowBackground:             #FFFFF0;
+
+@include theme();

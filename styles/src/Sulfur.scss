@@ -1,0 +1,29 @@
+/*
+	Sulfur Sock Chat Style
+	By Flashwave <http://flash.moe>
+	
+	Color palette inspired by PunBB style "Sulfur":
+	http://punbb.org/
+*/
+
+@import '_themer';
+
+$primaryBackground:                 #F1F1F1;
+$primaryColor:                      #333333;
+
+$interfaceBorderColor:              #B84623;
+$interfaceButtonBackground:         #B84623;
+$interfaceButtonColor:              #FFFFFF;           
+$interfaceLinkColor:                #B84623;
+$interfaceInputBackground:          #F7F5DC;
+$interfaceInputColor:               #000000;
+$interfaceSidebarBackground:        #F1F1F1;
+$interfaceSidebarTitleBackground:   #B84623;
+
+$chatBotColor:                      #B84623;
+$chatBotErrorColor:                 #FF0000;
+$chatLinkColor:                     #1E90FF;
+$chatOddRowBackground:              #DEDFDF;
+$chatEvenRowBackground:             #F1F1F1;
+
+@include theme();
